@@ -1,0 +1,160 @@
+/* #region Base */
+body {
+  background-color: #fff;
+  color: #111111;
+}
+/* #endregion */
+/* #region Common */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+
+  /* line-height: 28px; */
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+}
+/* #endregion */
+.header {
+}
+.nav {
+}
+.logo {
+}
+.logo-icon {
+}
+.nav-list {
+}
+.nav-iten {
+}
+.nav-link {
+}
+.socials {
+}
+.socials-item {
+}
+.socials-link {
+}
+.socials-icon {
+}
+.hero-title {
+}
+.btn {
+}
+.btn-accent {
+}
+.btn-primary {
+}
+.scroll-down {
+}
+.scroll-down-icon {
+}
+.benefits {
+}
+.visually-hidden {
+}
+.benefits-list {
+}
+.benefits-item {
+}
+.benefits-subtitle {
+}
+.benefits-text {
+}
+.ingredients {
+}
+.ingredients-title {
+}
+.ingredients-list {
+}
+.ingredients-item {
+}
+.ingredients-img {
+}
+.ingredients-subtitle {
+}
+.made {
+}
+.made-title {
+}
+.made-ill {
+}
+.made-subtitle {
+}
+.made-list {
+}
+.made-item {
+}
+.products {
+}
+.products-title {
+}
+.products-list {
+}
+.products-item {
+}
+.products-ing {
+}
+.products-caption {
+}
+.products-type {
+}
+.products-btn {
+}
+.bestsellers {
+}
+.bestsellers-title {
+}
+.Bestsellers-list {
+}
+.Bestsellers-item {
+}
+.bestsellers-ill {
+}
+.bestsellers-caption {
+}
+.reviews {
+}
+.reviews-title {
+}
+.reviews-list {
+}
+.reviews-item {
+}
+.reviews-avatar {
+}
+.reviews-author {
+}
+.reviews-desc {
+}
+.reviews-btn {
+}
+.btn-secondary {
+}
+.footer {
+}
+.footer-slogan {
+}
+.footer-caption {
+}
+.footer-socials {
+}
+.footer-item {
+}
+.footer-contacts {
+}
+.footer-contacts-list {
+}
+.footer-contacts-item {
+}
+.footer-contacts-link {
+}
+.footer-nav {
+}
+.footer-nav-item {
+}
+.footer-nav-link {
+}
