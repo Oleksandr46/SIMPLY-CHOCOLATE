@@ -1,4 +1,7 @@
 /* #region Base */
+.hidden {
+  display: none;
+}
 body {
   font-family: Montserrat, sans-serif;
   background-color: #fff;
@@ -19,6 +22,8 @@ a {
 ol,
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 address {
   font-style: normal;
@@ -29,7 +34,17 @@ button {
 /* #endregion */
 
 /* #region Common */
+.ingredients,
+.made,
+.products,
+.bestsellers,
+.reviews {
+  padding: 60px 0;
+}
 .section-title {
+  width: 412px;
+  margin: 0 auto;
+  margin-bottom: 50px;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.16667;
@@ -55,42 +70,112 @@ button {
   overflow: hidden;
 }
 .containers {
-  max-width: 1200px;
+  min-width: 320px;
+  max-width: 375px;
+  padding: 0 20px;
   margin: 0 auto;
-  padding: 0 32px;
+}
+@media only screen and (min-width: 768px) {
+  .containers {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .containers {
+    max-width: 1200px;
+    padding: 0 32px;
+  }
 }
 /* #endregion */
 
 /* #region Header */
-.header {
-  padding: 24px 32px;
+.header-container {
   display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* padding-top: 20px;
+  padding-bottom: 14px; */
+}
+.header {
 }
 .nav {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  margin-left: auto;
 }
 .logo {
+  display: flex;
+  align-items: center;
+
   font-style: italic;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
   color: #111;
+  gap: 4px;
 }
-.logo-icon {
+.mobil-menu {
+  display: flex;
+  align-items: center;
 }
+.menu-icon {
+}
+@media only screen and (min-width: 768px) {
+  .mobil-menu {
+    display: none;
+  }
+}
+.content {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .content {
+    display: flex;
+    gap: 28px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .content {
+    gap: 90px;
+  }
+}
+
 .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
-.nav-iten {
+@media only screen and (min-width: 1168px) {
+  .nav-list {
+    gap: 24px;
+  }
 }
 .nav-link {
+  display: block;
+  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14286;
+  line-height: 1.14;
   letter-spacing: -0.02em;
   color: #111;
 }
-.socials {
+.nav-link:hover,
+.nav-link:focus {
+  color: #fd9222;
 }
+.socials {
+  display: flex;
+  margin-left: 90px;
+
+  gap: 14px;
+}
+
 .socials-item {
 }
 .socials-link {
@@ -101,30 +186,70 @@ button {
 
 /* #region Hero */
 .hero {
-  background: rgba(17, 17, 17, 0.4);
+  padding-bottom: 80px;
 }
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 40px;
+  }
+}
+.hero-containers {
+  width: 1136px;
+  padding: 395px 20px 20px;
+  border-radius: 30px;
+
+  background: rgba(17, 17, 17, 0.4);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.4),
+      rgba(17, 17, 17, 0.4)
+    ),
+    url('../images/hero/hero-bg_mob@1x-min.jpg');
+}
+
 .hero-title {
   font-weight: 500;
   font-size: 28px;
-  line-height: 1.21429;
+  line-height: 1.21;
   letter-spacing: -0.03em;
   color: #fff;
+  width: 484px;
+  margin-bottom: 32px;
+}
+.hero-wrapper {
+  display: flex;
+  gap: 14px;
 }
 .btn {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  border-radius: 100px;
+  padding: 14px 40px;
+  min-width: 144px;
+  min-height: 45px;
+  border: 1px solid transparent;
+  background: transparent;
 }
 .btn-accent {
+  background: #fd9222;
 }
 .btn-primary {
+  background-color: none;
+  border-color: #fff;
 }
 .scroll-down {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.03em;
   color: #fff;
+  gap: 14px;
 }
 .scroll-down-icon {
 }
@@ -135,8 +260,7 @@ button {
   background: #1e1823;
   padding: 50px 0;
 }
-.visually-hidden {
-}
+
 .benefits-list {
   display: flex;
   gap: 88px;
@@ -162,14 +286,34 @@ button {
 
 /* #region Ingredients */
 .ingredients {
+  padding-top: 120px;
 }
 .ingredients-title {
 }
 .ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 .ingredients-item {
+  border-radius: 15px;
+  border: 1px solid #fd9222;
+  width: calc((100% - 3 * 32px) / 4);
+  /* width: 260px;
+  height: 270px; */
+  padding: 28px 23px;
+}
+.ingredients-item:nth-child(4n + 1) {
+  background-color: #fd9222;
+  color: #fff;
+}
+.ingredients-item:nth-child(4n + 3) {
+  background: #1e1823;
+  color: #fff;
+  border-color: transparent;
 }
 .ingredients-img {
+  margin-bottom: 36px;
 }
 .ingredients-subtitle {
   font-weight: 600;
@@ -177,7 +321,6 @@ button {
   line-height: 1.28;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #fff;
 }
 /* #endregion */
 
@@ -186,19 +329,43 @@ button {
 }
 .made-title {
 }
+.made-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.made-left-side {
+  width: 600px;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+}
 .made-ill {
 }
+.made-right-side {
+  border-radius: 15px;
+  background-color: #fff;
+  width: 516px;
+  padding: 32px;
+}
 .made-subtitle {
+  width: 350px;
+  margin-bottom: 28px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
 }
 .made-list {
+  /* display: flex;
+  flex-direction: column;
+  gap: 24px; */
 }
 .made-item {
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.02em;
+}
+.made-item:not(:last-child) {
+  margin-bottom: 24px;
 }
 /* #endregion */
 
@@ -328,7 +495,7 @@ button {
 .footer-nav-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14286;
+  line-height: 1.14;
   letter-spacing: -0.02em;
   color: #fff;
 }
